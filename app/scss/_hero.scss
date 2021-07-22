@@ -1,0 +1,71 @@
+.hero {
+  background-color: $veryLightGray;
+  overflow: hidden;
+
+  .container {
+    @include brakepoints-up(large) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    min-height: 17.5rem;
+    position: relative;
+    background-image: url("/images/bg-intro-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include brakepoints-up(large) {
+      background-image: none;
+      height: 41rem;
+      flex: 3;
+      order: 2;
+      
+      &::before {
+        content: "";
+        height: 100%;
+        width: 160%;
+        position: absolute;
+        background-image: url(/images/bg-intro-desktop.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+      &::after {
+        content: "";
+        height: 120%;
+        width: 100%;
+        position: absolute;
+        background-image: url(/images/image-mockups.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        @include brakepoints-up(large) {
+          width: 105%;
+          background-size: 105%;
+          left: 38%;
+        }
+        @include brakepoints-down(medium) {
+          width: 100%;
+          background-size: 60%;
+        }
+        @include brakepoints-down(small) {
+          width: 100%;
+          background-size: 100%;
+        }
+      }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include brakepoints-up(large) {
+      text-align: left;
+      flex: 2;
+      order: 1;
+    }
+  }
+}

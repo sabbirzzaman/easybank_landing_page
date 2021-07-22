@@ -1,0 +1,188 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: $textSizeLarge;
+  color: $grayishBlue;
+  overflow-x: hidden;
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+// Anchor text
+a {
+  color: $grayishBlue;
+  text-decoration: none;
+}
+
+// Global Button
+button,
+.button {
+  cursor: pointer;
+  padding: 0.875rem 2.1875rem;
+  background: linear-gradient(to left, $limeGreen, $brightCyan);
+  color: $white;
+  border-radius: 50px;
+  border: none;
+  font-size: $textSizeSmall;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  transition: opacity 200ms ease-in-out;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+// Paragraph Text Styles
+p {
+  font-size: $textSizeLarge;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: $grayishBlue;
+}
+
+// Heading Text Styles
+h1,
+h2,
+h3,
+h4 {
+  color: $darkBlue;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.31rem;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  @include brakepoints-up(large) {
+    font-size: 3.25rem;
+  }
+}
+
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5625rem;
+  @include brakepoints-up(large) {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.15;
+  @include brakepoints-up(large) {
+    font-size: 1.5rem;
+    margin-bottom: 2.125rem;
+  }
+}
+
+h4 {
+  font-size: 1.0625rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.15;
+}
+
+h6 {
+  color: $grayishBlue;
+  font-size: 0.625rem;
+  font-weight: 400;
+  margin: 0rem 0rem 0.75rem 0rem;
+}
+
+// FlexBox Styles
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+// Navigation Visibility
+.hide-for-mobile {
+  @include brakepoints-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include brakepoints-up(large) {
+    display: none;
+  }
+}
+
+// Container Sizing
+.container {
+  max-width: 71.25rem;
+  margin: 0 auto;
+
+  &--pall {
+    padding-top: 4.375rem;
+    padding-left: 1.5rem;
+    padding-bottom: 4.375rem;
+    padding-right: 1.5rem;
+    @include brakepoints-up(large) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+  }
+  &--px {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+    @include brakepoints-up(large) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  &--py {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  &--pt {
+    padding-top: 4.375rem;
+    @include brakepoints-up(large) {
+      padding-top: 6rem;
+    }
+  }
+  &--pl {
+    padding-left: 1.5rem;
+  }
+  &--pb {
+    padding-bottom: 4.375rem;
+    @include brakepoints-up(large) {
+      padding-bottom: 6rem;
+    }
+  }
+  &--pr {
+    padding-right: 1.5rem;
+  }
+}

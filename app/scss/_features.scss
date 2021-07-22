@@ -1,0 +1,43 @@
+.features {
+  background-color: $lightGrayishBlue;
+  @include brakepoints-down(small) {
+    text-align: center;
+  }
+
+  &__headline {
+    margin-bottom: 3.75rem;
+  }
+
+  &__grid {
+    @include brakepoints-up(medium) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    @include brakepoints-up(medium) {
+      padding-right: 20px;
+      &:last-child {
+        padding-right: 0px;
+      }
+      flex: 0 0 50%;
+    }
+    @include brakepoints-up(large) {
+      flex: 1;
+    }
+    img {
+      margin-bottom: 1.875rem;
+      @include brakepoints-up(large) {
+        margin-bottom: 2.75rem;
+      }
+    }
+
+    p {
+      font-size: $textSizeSmall;
+      @include brakepoints-up(large) {
+        font-size: $textSizeMedium;
+      }
+    }
+  }
+}
