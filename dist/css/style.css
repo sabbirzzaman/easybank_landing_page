@@ -419,7 +419,7 @@ h6 {
 .hero__image {
   min-height: 17.5rem;
   position: relative;
-  background-image: url("/images/bg-intro-mobile.svg");
+  background-image: url("../../images/bg-intro-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -441,7 +441,7 @@ h6 {
     height: 100%;
     width: 160%;
     position: absolute;
-    background-image: url(/images/bg-intro-desktop.svg);
+    background-image: url("../../images/bg-intro-desktop.svg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -453,7 +453,7 @@ h6 {
   height: 120%;
   width: 100%;
   position: absolute;
-  background-image: url(/images/image-mockups.png);
+  background-image: url("../../images/image-mockups.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom;
